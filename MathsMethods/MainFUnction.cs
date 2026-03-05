@@ -11,53 +11,33 @@ namespace MathsMethods
     {
         public static int[,] CreateFinalTable(int[,] arrRate, int[] arrCustomer, int[] arrStore)
         {
-            int lengn = arrStore.Length + 1;
-            int lengm = arrCustomer.Length + 1;
-            int[,] arrFinal = new int[lengn, lengm];
-            int k = 0;
-            int num = 0;
-            int l = 0;
-            int num2 = 0;
-            int predel = arrRate.GetLength(0);
-            int predel2 = arrRate.GetLength(1);
-            for (int i = 0; i < arrFinal.GetLength(0); i++)
+            int rows = arrStore.Length + 1;    
+            int cols = arrCustomer.Length + 1;  
+            int[,] arrFinal = new int[rows, cols];
+
+            arrFinal[0, 0] = 0;
+
+
+            for (int j = 1; j < cols; j++)
             {
-                for (int j = 0; j < arrFinal.GetLength(1); j++)
+                arrFinal[0, j] = arrCustomer[j - 1];
+            }
+
+            for (int i = 1; i < rows; i++)
+            {
+                arrFinal[i, 0] = arrStore[i - 1];
+            }
+
+            for (int i = 1; i < rows; i++)
+            {
+                for (int j = 1; j < cols; j++)
                 {
-                    if (j == 0 && i == 0)
-                    {
-                        arrFinal[i, j] = 0;
-                    }
-                    else if (j != 0 && i == 0)
-                    {
-                        arrFinal[i, j] = arrStore[num];
-                        num++;
-                    }
-                    else if (j == 0 && i != 0)
-                    {
-                        arrFinal[i, j] = arrCustomer[num2];
-                        num2++;
-
-                    }
-                    else
-                    {
-                        if (k < predel)
-                        {
-                            arrFinal[i, j] = arrRate[k, l];
-                            l++;
-                            if (l == predel2 && k < predel)
-                            {
-                                k++;
-                                l = 0;
-                            }
-                        }
-
-                    }
+                    arrFinal[i, j] = arrRate[i - 1, j - 1];
                 }
             }
             return arrFinal;
         }
-           public static void printmas(int[,] array)
+        public static void printmas(int[,] array)
             {
                 for (int i = 0; i < array.GetLength(0); i++)
                 {
