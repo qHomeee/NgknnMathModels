@@ -1,0 +1,33 @@
+[2026-02-27 10:33:18] TRACE: Program started
+[10:33:18] TRACE: GenerateStringConcat start count=1000
+[10:33:18] TRACE: GenerateStringConcat end length=14893
+[10:33:18] TRACE: GenerateStringSB start count=1000
+[10:33:18] TRACE: GenerateStringSB end length=14893
+[10:33:18] TRACE: simple count=1000 Concat=4ms SB=1ms
+[10:33:18] TRACE: GenerateStringConcat start count=10000
+[10:33:18] TRACE: GenerateStringConcat end length=158894
+[10:33:18] TRACE: GenerateStringSB start count=10000
+[10:33:18] TRACE: GenerateStringSB end length=158894
+[10:33:18] TRACE: simple count=10000 Concat=102ms SB=3ms
+[10:33:18] TRACE: GenerateStringConcat start count=100000
+[10:33:32] TRACE: GenerateStringConcat end length=1688895
+[10:33:32] TRACE: GenerateStringSB start count=100000
+[10:33:32] TRACE: GenerateStringSB end length=1688895
+[10:33:32] TRACE: simple count=100000 Concat=14409ms SB=1ms
+[10:33:32] TRACE: GenerateStringConcatComplex start count=1000
+[10:33:32] TRACE: GenerateStringConcatComplex end length=51790
+[10:33:32] TRACE: GenerateStringSBComplex start count=1000
+[10:33:32] TRACE: GenerateStringSBComplex end length=51790
+[10:33:32] TRACE: complex count=1000 Concat=31ms SB=1ms
+[10:33:32] TRACE: GenerateStringConcatComplex start count=10000
+[10:33:33] TRACE: GenerateStringConcatComplex end length=527843
+[10:33:33] TRACE: GenerateStringSBComplex start count=10000
+[10:33:33] TRACE: GenerateStringSBComplex end length=527843
+[10:33:33] TRACE: complex count=10000 Concat=340ms SB=4ms
+[10:33:33] TRACE: GenerateStringConcatComplex start count=100000
+[10:34:30] TRACE: GenerateStringConcatComplex end length=5378075
+[10:34:30] TRACE: GenerateStringSBComplex start count=100000
+[10:34:30] TRACE: GenerateStringSBComplex end length=5378075
+[10:34:30] TRACE: complex count=100000 Concat=57195ms SB=6ms
+[10:34:30] TRACE: Results saved to results.csv
+[2026-02-27 10:34:30] TRACE: Program finished

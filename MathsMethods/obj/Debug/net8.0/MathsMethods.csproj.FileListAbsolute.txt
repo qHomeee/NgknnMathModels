@@ -1,0 +1,14 @@
+X:\OAP\CSharp\MathsMethods\MathsMethods\obj\Debug\net8.0\MathsMethods.GeneratedMSBuildEditorConfig.editorconfig
+X:\OAP\CSharp\MathsMethods\MathsMethods\obj\Debug\net8.0\MathsMethods.AssemblyInfoInputs.cache
+X:\OAP\CSharp\MathsMethods\MathsMethods\obj\Debug\net8.0\MathsMethods.AssemblyInfo.cs
+X:\OAP\CSharp\MathsMethods\MathsMethods\obj\Debug\net8.0\MathsMethods.csproj.CoreCompileInputs.cache
+X:\OAP\CSharp\MathsMethods\MathsMethods\bin\Debug\net8.0\MathsMethods.exe
+X:\OAP\CSharp\MathsMethods\MathsMethods\bin\Debug\net8.0\MathsMethods.deps.json
+X:\OAP\CSharp\MathsMethods\MathsMethods\bin\Debug\net8.0\MathsMethods.runtimeconfig.json
+X:\OAP\CSharp\MathsMethods\MathsMethods\bin\Debug\net8.0\MathsMethods.dll
+X:\OAP\CSharp\MathsMethods\MathsMethods\bin\Debug\net8.0\MathsMethods.pdb
+X:\OAP\CSharp\MathsMethods\MathsMethods\obj\Debug\net8.0\MathsMethods.dll
+X:\OAP\CSharp\MathsMethods\MathsMethods\obj\Debug\net8.0\refint\MathsMethods.dll
+X:\OAP\CSharp\MathsMethods\MathsMethods\obj\Debug\net8.0\MathsMethods.pdb
+X:\OAP\CSharp\MathsMethods\MathsMethods\obj\Debug\net8.0\MathsMethods.genruntimeconfig.cache
+X:\OAP\CSharp\MathsMethods\MathsMethods\obj\Debug\net8.0\ref\MathsMethods.dll

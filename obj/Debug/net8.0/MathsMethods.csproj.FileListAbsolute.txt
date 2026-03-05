@@ -1,0 +1,14 @@
+X:\vs code\CS\MathsMethods\bin\Debug\net8.0\MathsMethods.exe
+X:\vs code\CS\MathsMethods\bin\Debug\net8.0\MathsMethods.deps.json
+X:\vs code\CS\MathsMethods\bin\Debug\net8.0\MathsMethods.runtimeconfig.json
+X:\vs code\CS\MathsMethods\bin\Debug\net8.0\MathsMethods.dll
+X:\vs code\CS\MathsMethods\bin\Debug\net8.0\MathsMethods.pdb
+X:\vs code\CS\MathsMethods\obj\Debug\net8.0\MathsMethods.GeneratedMSBuildEditorConfig.editorconfig
+X:\vs code\CS\MathsMethods\obj\Debug\net8.0\MathsMethods.AssemblyInfoInputs.cache
+X:\vs code\CS\MathsMethods\obj\Debug\net8.0\MathsMethods.AssemblyInfo.cs
+X:\vs code\CS\MathsMethods\obj\Debug\net8.0\MathsMethods.csproj.CoreCompileInputs.cache
+X:\vs code\CS\MathsMethods\obj\Debug\net8.0\MathsMethods.dll
+X:\vs code\CS\MathsMethods\obj\Debug\net8.0\refint\MathsMethods.dll
+X:\vs code\CS\MathsMethods\obj\Debug\net8.0\MathsMethods.pdb
+X:\vs code\CS\MathsMethods\obj\Debug\net8.0\MathsMethods.genruntimeconfig.cache
+X:\vs code\CS\MathsMethods\obj\Debug\net8.0\ref\MathsMethods.dll

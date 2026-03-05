@@ -1,0 +1,13 @@
+﻿Mode,Count,Method,ElapsedMs,Length
+simple,1000,Concat,4,14893
+simple,1000,StringBuilder,1,14893
+simple,10000,Concat,102,158894
+simple,10000,StringBuilder,3,158894
+simple,100000,Concat,14409,1688895
+simple,100000,StringBuilder,1,1688895
+complex,1000,Concat,31,51790
+complex,1000,StringBuilder,1,51790
+complex,10000,Concat,340,527843
+complex,10000,StringBuilder,4,527843
+complex,100000,Concat,57195,5378075
+complex,100000,StringBuilder,6,5378075
