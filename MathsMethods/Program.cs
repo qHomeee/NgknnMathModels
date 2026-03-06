@@ -1,4 +1,4 @@
-﻿
+
 using System.ComponentModel;
 using System.Xml.Serialization;
 using MathsMethods;
@@ -7,7 +7,7 @@ using MathsMethods;
 int n = 0;
 int m = 0;
 Console.WriteLine("введите количество поставщиков: ");
-    n = int.Parse(Console.ReadLine()!);
+n = int.Parse(Console.ReadLine()!);
 Console.WriteLine("введите количество покупателей: ");
  m = int.Parse(Console.ReadLine()!);
 int[] arrCustomers = new int[m];
@@ -24,7 +24,7 @@ int[,] ArrFull;
 
 while (true)
 {
-    Console.WriteLine("Выберите метод: 1) мин.элемент 2) северо-западный 3) Фогель");
+    Console.WriteLine("Выберите метод: 1) мин.элемент 2) северо-западный");
     int choice = int.Parse(Console.ReadLine()!);
 
     Methods.TransportResult res;
@@ -32,13 +32,10 @@ while (true)
     switch (choice)
     {
         case 1:
-            res = Methods.MinCostMethod(arrStore, arrCustomers, arrRate);
+            res = Methods.MinElemMethod(arrStore, arrCustomers, arrRate);
             break;
         case 2:
             res = Methods.NorthwestCorner(arrStore, arrCustomers, arrRate);
-            break;
-        case 3:
-            res = Methods.VogelApproximation(arrStore, arrCustomers, arrRate);
             break;
         default:
             Console.WriteLine("Неверный выбор");
@@ -53,4 +50,12 @@ while (true)
     MainFunction.printmas(res.Plan);
 
     Console.WriteLine($"\nЦелевая функция = {res.TotalCost}");
+    if(Methods.OptimOrNot(res.Plan) == true)
+    {
+        Console.WriteLine("план оптимален!");
+    }
+    else
+    {
+        Console.WriteLine("План не оптимален! Хотите ввести Более оптимальный");
+    }
 }
