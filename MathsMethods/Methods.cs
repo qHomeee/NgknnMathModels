@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +9,7 @@ namespace MathsMethods
 {
     internal class Methods
     {
-        // Удобная структура результата: план + стоимость
+        //структура результата
         public struct TransportResult
         {
             public int[,] Plan;
@@ -22,70 +22,7 @@ namespace MathsMethods
             }
         }
 
-        // ===========================
-        //  ОБЩИЕ ВСПОМОГАТЕЛЬНЫЕ ШТУКИ
-        // ===========================
-        private static void BalanceProblem(ref int[] supply, ref int[] demand, ref int[,] costs)
-        {
-            int sumSupply = 0;
-            int sumDemand = 0;
-            for (int i = 0; i < supply.Length; i++) sumSupply += supply[i];
-            for (int j = 0; j < demand.Length; j++) sumDemand += demand[j];
-
-            if (sumSupply == sumDemand) return;
-
-            if (sumSupply < sumDemand)
-            {
-                // Добавляем фиктивного поставщика
-                int diff = sumDemand - sumSupply;
-
-                int[] newSupply = new int[supply.Length + 1];
-                for (int i = 0; i < supply.Length; i++) newSupply[i] = supply[i];
-                newSupply[newSupply.Length - 1] = diff;
-
-                int[,] newCosts = new int[costs.GetLength(0) + 1, costs.GetLength(1)];
-                for (int i = 0; i < costs.GetLength(0); i++)
-                {
-                    for (int j = 0; j < costs.GetLength(1); j++)
-                    {
-                        newCosts[i, j] = costs[i, j];
-                    }
-                }
-                // Тарифы фиктивного поставщика = 0
-                for (int j = 0; j < newCosts.GetLength(1); j++)
-                {
-                    newCosts[newCosts.GetLength(0) - 1, j] = 0;
-                }
-                supply = newSupply;
-                costs = newCosts;
-            }
-            else
-            {
-                // Добавляем фиктивного потребителя
-                int diff = sumSupply - sumDemand;
-
-                int[] newDemand = new int[demand.Length + 1];
-                for (int j = 0; j < demand.Length; j++) newDemand[j] = demand[j];
-                newDemand[newDemand.Length - 1] = diff;
-
-                int[,] newCosts = new int[costs.GetLength(0), costs.GetLength(1) + 1];
-                for (int i = 0; i < costs.GetLength(0); i++)
-                {
-                    for (int j = 0; j < costs.GetLength(1); j++)
-                    {
-                        newCosts[i, j] = costs[i, j];
-                    }
-                }
-
-                // Тарифы фиктивного потребителя = 0
-                for (int i = 0; i < newCosts.GetLength(0); i++)
-                {
-                    newCosts[i, newCosts.GetLength(1) - 1] = 0;
-                }
-                demand = newDemand;
-                costs = newCosts;
-            }
-        }
+       
 
         private static int ComputeCost(int[,] plan, int[,] costs)
         {
@@ -100,16 +37,15 @@ namespace MathsMethods
             return total;
         }
 
-        // ===========================
         //  1) СЕВЕРО-ЗАПАДНЫЙ УГОЛ
-        // ===========================
+        
         public static TransportResult NorthwestCorner(int[] supplyInput, int[] demandInput, int[,] costsInput)
         {
             int[] supply = (int[])supplyInput.Clone();
             int[] demand = (int[])demandInput.Clone();
             int[,] costs = (int[,])costsInput.Clone();
 
-            BalanceProblem(ref supply, ref demand, ref costs);
+         
 
             int n = supply.Length;
             int m = demand.Length;
@@ -131,16 +67,12 @@ namespace MathsMethods
             return new TransportResult(plan, total);
         }
 
-        // ===========================
         //  2) МЕТОД МИНИМАЛЬНОГО ЭЛЕМЕНТА
-        // ===========================
-        public static TransportResult MinCostMethod(int[] supplyInput, int[] demandInput, int[,] costsInput)
+        public static TransportResult MinElemMethod(int[] supplyInput, int[] demandInput, int[,] costsInput)
         {
             int[] supply = (int[])supplyInput.Clone();
             int[] demand = (int[])demandInput.Clone();
             int[,] costs = (int[,])costsInput.Clone();
-
-            BalanceProblem(ref supply, ref demand, ref costs);
 
             int n = supply.Length;
             int m = demand.Length;
@@ -172,7 +104,6 @@ namespace MathsMethods
                     }
                 }
 
-                // если не нашли (бывает при нулях) — выходим
                 if (bestI == -1 || bestJ == -1) break;
 
                 int x = Math.Min(supply[bestI], demand[bestJ]);
@@ -195,6 +126,14 @@ namespace MathsMethods
             int total = ComputeCost(plan, costs);
             return new TransportResult(plan, total);
         }
+        
 
+
+
+
+        public static bool OptimOrNot(int[,] Plan)
+        {
+            
+        }
     }
 }
